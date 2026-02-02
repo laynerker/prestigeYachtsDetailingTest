@@ -13,10 +13,6 @@ export const metadata: Metadata = {
   description: "Luxury Yacht Rentals in Miami",
 };
 
-export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'es' }];
-}
-
 export default async function RootLayout({
   children,
   params
