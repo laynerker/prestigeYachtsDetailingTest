@@ -62,7 +62,7 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
           # Add this line to specify the config file path
-      generator_config_file: ./next.config.js # or next.config.mjs if you rename it
+          generator_config_file: ./next.config.js # or next.config.mjs if you rename it
       - name: Restore cache
         uses: actions/cache@v4
         with:
