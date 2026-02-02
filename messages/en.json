@@ -1,0 +1,25 @@
+{
+    "Navigation": {
+        "home": "Home",
+        "about": "About Us",
+        "yachts": "Our Yachts",
+        "addons": "Add-Ons & Packages",
+        "contact": "Contact Us"
+    },
+    "Home": {
+        "title": "Luxury Yachting Redefined",
+        "subtitle": "Premium yacht rentals in Miami",
+        "cta": "Explore Our Fleet",
+        "stats": {
+            "yachts": "Luxury Yachts",
+            "clients": "Happy Clients",
+            "voyages": "Voyages Completed"
+        }
+    },
+    "Footer": {
+        "slogan": "Experience the pinnacle of luxury at sea. Prestige Yachts Detailing offers unforgettable moments aboard our exclusive fleet.",
+        "quickLinks": "Quick Links",
+        "contact": "Contact Information",
+        "copyright": "© 2026 Prestige Yachts Detailing. All rights reserved."
+    }
+}

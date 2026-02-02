@@ -1,0 +1,25 @@
+{
+    "Navigation": {
+        "home": "Inicio",
+        "about": "Nosotros",
+        "yachts": "Nuestros Yates",
+        "addons": "Paquetes y Extras",
+        "contact": "Contacto"
+    },
+    "Home": {
+        "title": "Lujo Náutico Redefinido",
+        "subtitle": "Alquiler de yates premium en Miami",
+        "cta": "Explora Nuestra Flota",
+        "stats": {
+            "yachts": "Yates de Lujo",
+            "clients": "Clientes Felices",
+            "voyages": "Viajes Completados"
+        }
+    },
+    "Footer": {
+        "slogan": "Experimenta la cúspide del lujo en el mar. Prestige Yachts Detailing ofrece momentos inolvidables a bordo de nuestra flota exclusiva.",
+        "quickLinks": "Enlaces Rápidos",
+        "contact": "Información de Contacto",
+        "copyright": "© 2026 Prestige Yachts Detailing. Todos los derechos reservados."
+    }
+}
