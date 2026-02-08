@@ -1,6 +1,7 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Footer({ locale }: { locale: string }) {
@@ -12,7 +13,15 @@ export default function Footer({ locale }: { locale: string }) {
             <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
                 {/* Col 1: Brand */}
                 <div className="space-y-6">
-                    <h2 className="text-3xl font-serif font-bold tracking-tight">Prestige Yachts</h2>
+                    <div className="mb-4">
+                        <Image
+                            src="/assets/images/logo.png"
+                            alt="Prestige Yacht Detailing"
+                            width={220}
+                            height={80}
+                            className="h-32 w-auto object-contain"
+                        />
+                    </div>
                     <p className="text-gray-400 leading-relaxed max-w-sm text-sm">
                         {t('slogan')}
                     </p>
@@ -24,8 +33,8 @@ export default function Footer({ locale }: { locale: string }) {
                     <ul className="space-y-4">
                         <li><Link href={`/${locale}`} className="text-gray-400 hover:text-gold hover:translate-x-1 transition-all inline-block">{navT('home')}</Link></li>
                         <li><Link href={`/${locale}/about`} className="text-gray-400 hover:text-gold hover:translate-x-1 transition-all inline-block">{navT('about')}</Link></li>
-                        <li><Link href={`/${locale}/yachts`} className="text-gray-400 hover:text-gold hover:translate-x-1 transition-all inline-block">{navT('yachts')}</Link></li>
-                        <li><Link href={`/${locale}/addons`} className="text-gray-400 hover:text-gold hover:translate-x-1 transition-all inline-block">{navT('addons')}</Link></li>
+
+                        <li><Link href={`/${locale}/services`} className="text-gray-400 hover:text-gold hover:translate-x-1 transition-all inline-block">{navT('services')}</Link></li>
                         <li><Link href={`/${locale}/contact`} className="text-gray-400 hover:text-gold hover:translate-x-1 transition-all inline-block">{navT('contact')}</Link></li>
                     </ul>
                 </div>

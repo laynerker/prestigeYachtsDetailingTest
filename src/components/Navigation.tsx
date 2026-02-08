@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 import { clsx } from 'clsx';
@@ -23,8 +24,8 @@ export default function Navigation({ locale }: { locale: string }) {
     const navLinks = [
         { href: `/${locale}`, label: t('home') },
         { href: `/${locale}/about`, label: t('about') },
-        { href: `/${locale}/yachts`, label: t('yachts') },
-        { href: `/${locale}/addons`, label: t('addons') },
+
+        { href: `/${locale}/services`, label: t('services') },
         { href: `/${locale}/contact`, label: t('contact') },
     ];
 
@@ -58,8 +59,18 @@ export default function Navigation({ locale }: { locale: string }) {
             )}
         >
             <div className="container mx-auto px-4 flex items-center justify-between">
-                <Link href={`/${locale}`} className="text-2xl font-serif font-bold text-white relative z-50 tracking-wider">
-                    Prestige Yachts
+                <Link href={`/${locale}`} className="relative z-50 block">
+                    <Image
+                        src="/assets/images/logo.png"
+                        alt="Prestige Yacht Detailing"
+                        width={240}
+                        height={80}
+                        className={cn(
+                            "w-auto object-contain transition-all duration-500",
+                            isScrolled ? "h-12 md:h-14" : "h-16 md:h-24"
+                        )}
+                        priority
+                    />
                 </Link>
 
                 {/* Desktop Menu */}

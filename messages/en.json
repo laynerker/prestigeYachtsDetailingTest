@@ -2,8 +2,7 @@
     "Navigation": {
         "home": "Home",
         "about": "About Us",
-        "yachts": "Our Yachts",
-        "addons": "Add-Ons & Packages",
+        "services": "Services",
         "contact": "Contact Us"
     },
     "Home": {

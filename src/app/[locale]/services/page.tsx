@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import { setRequestLocale } from 'next-intl/server';
 
-export default async function Addons({ params }: { params: Promise<{ locale: string }> }) {
+export default async function Services({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     setRequestLocale(locale);
 
@@ -35,29 +35,6 @@ export default async function Addons({ params }: { params: Promise<{ locale: str
                         <button className="px-6 py-3 bg-navy text-white rounded hover:bg-gold transition-colors">Request Custom Menu</button>
                     </div>
                 </div>
-
-                {/* Menu Grid */}
-                <div>
-                    <h2 className="text-3xl font-serif font-bold text-navy mb-12 text-center">MENU HIGHLIGHTS</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {/* Example Menu usage as per SRS */}
-                        {[
-                            { name: 'Fruit Tray', price: '$139' },
-                            { name: 'Caprese Salad', price: '$139' },
-                            { name: 'Sushi Trays', price: '$250' },
-                            { name: 'Burrata', price: '$200' }
-                        ].map((item) => (
-                            <div key={item.name} className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all hover:-translate-y-1">
-                                <div className="h-48 bg-gray-100 rounded-t-lg"></div>
-                                <div className="p-6">
-                                    <h4 className="text-lg font-bold text-navy">{item.name}</h4>
-                                    <span className="text-xl font-bold text-gold block mt-2">{item.price}</span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
             </section>
 
             <Footer locale={locale} />
