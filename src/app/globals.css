@@ -4,7 +4,7 @@
   /* Brand Colors */
   --color-navy: #0D1F2D;
   --color-navy-light: #1A2442;
-  --color-gold: #D4AF37;
+  --color-gold: #C9A55A;
   --color-gold-light: #F4CF57;
   --color-gold-dark: #B59326;
   --color-white: #FFFFFF;
@@ -61,4 +61,5 @@ h4,
 h5,
 h6 {
   font-family: var(--font-serif);
+  color: var(--color-gold);
 }

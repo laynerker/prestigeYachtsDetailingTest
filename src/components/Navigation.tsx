@@ -79,12 +79,12 @@ export default function Navigation({ locale }: { locale: string }) {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className="text-white hover:text-gold transition-colors text-sm font-medium uppercase tracking-wide"
+                            className="text-gold hover:text-white transition-colors text-sm font-medium uppercase tracking-wide"
                         >
                             {link.label}
                         </Link>
                     ))}
-                    <button onClick={toggleLanguage} className="text-white hover:text-gold transition-colors flex items-center gap-1 ml-4 border border-white/20 px-3 py-1 rounded-full text-xs">
+                    <button onClick={toggleLanguage} className="text-gold hover:text-white transition-colors flex items-center gap-1 ml-4 border border-gold/20 hover:border-white/20 px-3 py-1 rounded-full text-xs">
                         <Globe size={14} />
                         <span className="uppercase">{locale}</span>
                     </button>
@@ -92,7 +92,7 @@ export default function Navigation({ locale }: { locale: string }) {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-white z-50 p-2"
+                    className="md:hidden text-gold z-50 p-2"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -109,13 +109,13 @@ export default function Navigation({ locale }: { locale: string }) {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className="text-white text-2xl font-serif"
+                            className="text-gold text-2xl font-serif"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             {link.label}
                         </Link>
                     ))}
-                    <button onClick={toggleLanguage} className="text-white mt-8 flex items-center gap-2 border border-white/20 px-4 py-2 rounded-full">
+                    <button onClick={toggleLanguage} className="text-gold mt-8 flex items-center gap-2 border border-gold/20 px-4 py-2 rounded-full">
                         <Globe size={20} />
                         <span className="uppercase">{locale === 'en' ? 'Español' : 'English'}</span>
                     </button>
