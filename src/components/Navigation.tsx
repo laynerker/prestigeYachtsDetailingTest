@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 import { clsx } from 'clsx';
@@ -23,8 +24,8 @@ export default function Navigation({ locale }: { locale: string }) {
     const navLinks = [
         { href: `/${locale}`, label: t('home') },
         { href: `/${locale}/about`, label: t('about') },
-        { href: `/${locale}/yachts`, label: t('yachts') },
-        { href: `/${locale}/addons`, label: t('addons') },
+
+        { href: `/${locale}/services`, label: t('services') },
         { href: `/${locale}/contact`, label: t('contact') },
     ];
 
@@ -58,8 +59,18 @@ export default function Navigation({ locale }: { locale: string }) {
             )}
         >
             <div className="container mx-auto px-4 flex items-center justify-between">
-                <Link href={`/${locale}`} className="text-2xl font-serif font-bold text-white relative z-50 tracking-wider">
-                    Prestige Yachts
+                <Link href={`/${locale}`} className="relative z-50 block">
+                    <Image
+                        src="/assets/images/logo.png"
+                        alt="Prestige Yacht Detailing"
+                        width={240}
+                        height={80}
+                        className={cn(
+                            "w-auto object-contain transition-all duration-500",
+                            isScrolled ? "h-12 md:h-14" : "h-16 md:h-24"
+                        )}
+                        priority
+                    />
                 </Link>
 
                 {/* Desktop Menu */}
@@ -68,12 +79,12 @@ export default function Navigation({ locale }: { locale: string }) {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className="text-white hover:text-gold transition-colors text-sm font-medium uppercase tracking-wide"
+                            className="text-gold hover:text-white transition-colors text-sm font-medium uppercase tracking-wide"
                         >
                             {link.label}
                         </Link>
                     ))}
-                    <button onClick={toggleLanguage} className="text-white hover:text-gold transition-colors flex items-center gap-1 ml-4 border border-white/20 px-3 py-1 rounded-full text-xs">
+                    <button onClick={toggleLanguage} className="text-gold hover:text-white transition-colors flex items-center gap-1 ml-4 border border-gold/20 hover:border-white/20 px-3 py-1 rounded-full text-xs">
                         <Globe size={14} />
                         <span className="uppercase">{locale}</span>
                     </button>
@@ -81,7 +92,7 @@ export default function Navigation({ locale }: { locale: string }) {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-white z-50 p-2"
+                    className="md:hidden text-gold z-50 p-2"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -98,13 +109,13 @@ export default function Navigation({ locale }: { locale: string }) {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className="text-white text-2xl font-serif"
+                            className="text-gold text-2xl font-serif"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             {link.label}
                         </Link>
                     ))}
-                    <button onClick={toggleLanguage} className="text-white mt-8 flex items-center gap-2 border border-white/20 px-4 py-2 rounded-full">
+                    <button onClick={toggleLanguage} className="text-gold mt-8 flex items-center gap-2 border border-gold/20 px-4 py-2 rounded-full">
                         <Globe size={20} />
                         <span className="uppercase">{locale === 'en' ? 'Español' : 'English'}</span>
                     </button>
