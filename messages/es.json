@@ -2,24 +2,29 @@
     "Navigation": {
         "home": "Inicio",
         "about": "Nosotros",
-        "yachts": "Nuestros Yates",
-        "addons": "Paquetes y Extras",
+        "services": "Servicios",
         "contact": "Contacto"
     },
     "Home": {
         "title": "Lujo Náutico Redefinido",
-        "subtitle": "Alquiler de yates premium en Miami",
-        "cta": "Explora Nuestra Flota",
+        "subtitle": "Mantenimiento de yates premium en Miami",
+        "cta": "Explora Nuestra Experiencia",
         "stats": {
-            "yachts": "Yates de Lujo",
-            "clients": "Clientes Felices",
-            "voyages": "Viajes Completados"
+            "yachts": "Yates impecables",
+            "clients": "Clientes santisfechos",
+            "voyages": "Trabajos completados"
         }
     },
     "Footer": {
-        "slogan": "Experimenta la cúspide del lujo en el mar. Prestige Yachts Detailing ofrece momentos inolvidables a bordo de nuestra flota exclusiva.",
+        "slogan": "Expertos en el cuidado integral de yates: lavado premium, tratamiento de teca, pulido de metales y mantenimiento de sala de máquinas. Garantizamos un acabado impecable y protección duradera para su embarcación.",
         "quickLinks": "Enlaces Rápidos",
         "contact": "Información de Contacto",
         "copyright": "© 2026 Prestige Yachts Detailing. Todos los derechos reservados."
+    },
+    "About": {
+        "title": "Bienvenido a Prestige Yachts Detailing",
+        "p1": "En Prestige Yachts Detailing, estamos estableciendo un nuevo estándar para el cuidado de yates en Miami. Como un equipo nuevo y apasionado en la industria marítima, aportamos energía fresca, dedicación inquebrantable y una obsesiva atención al detalle en cada servicio.",
+        "p2": "Nuestra misión es simple pero ambiciosa: preservar la condición impecable de su inversión. Nos especializamos en el cuidado integral, desde limpiezas profundas y tratamientos de teca hasta pulido de metales y mantenimiento de sala de máquinas, asegurando que su yate siempre luzca en su mejor estado.",
+        "quote": "Su satisfacción no es solo nuestro objetivo, es nuestra promesa."
     }
 }

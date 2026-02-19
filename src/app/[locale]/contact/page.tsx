@@ -30,7 +30,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: st
                                 </div>
                                 <div>
                                     <span className="block text-sm uppercase text-gray-500 font-bold tracking-wider mb-1">Phone</span>
-                                    <a href="tel:+13051234567" className="text-xl text-navy hover:text-gold transition-colors font-medium">+1 (305) 123-4567</a>
+                                    <a href="tel:+19548534995" className="text-xl text-navy hover:text-gold transition-colors font-medium">+1 (954) 853-4995</a>
                                     <p className="text-sm text-gray-400 mt-1">Mon-Sun, 9am - 8pm</p>
                                 </div>
                             </div>
@@ -41,7 +41,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: st
                                 </div>
                                 <div>
                                     <span className="block text-sm uppercase text-gray-500 font-bold tracking-wider mb-1">Email</span>
-                                    <a href="mailto:info@prestigeyachts.com" className="text-xl text-navy hover:text-gold transition-colors font-medium">info@prestigeyachts.com</a>
+                                    <a href="mailto:contact@prestigeyachtsdetailing.com" className="text-xl text-navy hover:text-gold transition-colors font-medium">contact@prestigeyachtsdetailing.com</a>
                                 </div>
                             </div>
 
@@ -51,8 +51,8 @@ export default async function Contact({ params }: { params: Promise<{ locale: st
                                 </div>
                                 <div>
                                     <span className="block text-sm uppercase text-gray-500 font-bold tracking-wider mb-1">Location</span>
-                                    <p className="text-xl text-navy font-medium">Miami Beach Marina</p>
-                                    <p className="text-gray-500">300 Alton Rd, Miami Beach, FL 33139</p>
+                                    <p className="text-xl text-navy font-medium">South Florida</p>
+                                    <p className="text-gray-500">Miami, Miami Beach, Fort Lauderdale</p>
                                 </div>
                             </div>
                         </div>
