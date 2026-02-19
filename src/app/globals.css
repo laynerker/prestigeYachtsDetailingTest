@@ -2,24 +2,24 @@
 
 :root {
   /* Brand Colors */
-  --color-navy: #0D1F2D;
+  --color-navy: #0A1128;
   --color-navy-light: #1A2442;
-  --color-gold: #C9A55A;
+  --color-gold: #D4AF37;
   --color-gold-light: #F4CF57;
   --color-gold-dark: #B59326;
   --color-white: #FFFFFF;
   --color-black: #000000;
-
+  
   /* Theme mapping */
   --background: var(--color-white);
   --foreground: var(--color-navy);
-
+  
   --primary: var(--color-navy);
   --primary-foreground: var(--color-white);
-
+  
   --secondary: var(--color-gold);
   --secondary-foreground: var(--color-navy);
-
+  
   --muted: #F3F4F6;
   --muted-foreground: #4B5563;
 }
@@ -30,16 +30,16 @@
   --color-gold: var(--color-gold);
   --color-gold-light: var(--color-gold-light);
   --color-gold-dark: var(--color-gold-dark);
-
+  
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-
+  
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
-
+  
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-
+  
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
 
@@ -54,12 +54,6 @@ body {
   font-family: var(--font-sans);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
-  color: var(--color-gold);
 }

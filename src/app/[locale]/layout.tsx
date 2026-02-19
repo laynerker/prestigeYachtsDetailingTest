@@ -2,16 +2,11 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
+import { getMessages } from 'next-intl/server';
 import { notFound } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
-
-// ...existing code...
-export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'es' }];
-}
 
 export const metadata: Metadata = {
   title: "Prestige Yachts Detailing",
@@ -31,9 +26,6 @@ export default async function RootLayout({
   if (!['en', 'es'].includes(locale)) {
     notFound();
   }
-
-  // Enable static rendering
-  setRequestLocale(locale);
 
   // Providing all messages to the client
   // side is the easiest way to get started
