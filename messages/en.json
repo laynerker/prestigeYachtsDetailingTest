@@ -7,18 +7,24 @@
     },
     "Home": {
         "title": "Luxury Yachting Redefined",
-        "subtitle": "Premium yacht rentals in Miami",
-        "cta": "Explore Our Fleet",
+        "subtitle": "Premium yacht maintenance in Miami",
+        "cta": "Explore Our Experience",
         "stats": {
-            "yachts": "Luxury Yachts",
-            "clients": "Happy Clients",
-            "voyages": "Voyages Completed"
+            "yachts": "Impeccable Yachts",
+            "clients": "Satisfied Clients",
+            "voyages": "Completed Jobs"
         }
     },
     "Footer": {
-        "slogan": "Experience the pinnacle of luxury at sea. Prestige Yachts Detailing offers unforgettable moments aboard our exclusive fleet.",
+        "slogan": "Experts in comprehensive yacht care: premium washing, teak treatment, metal polishing, and engine room maintenance. We ensure an impeccable finish and long-lasting protection for your vessel.",
         "quickLinks": "Quick Links",
         "contact": "Contact Information",
         "copyright": "© 2026 Prestige Yachts Detailing. All rights reserved."
+    },
+    "About": {
+        "title": "Welcome to Prestige Yachts Detailing",
+        "p1": "At Prestige Yachts Detailing, we are setting a new standard for yacht care in Miami. As a dedicated new team in the marine industry, we bring fresh energy, unwavering dedication, and an obsessive attention to detail to every vessel we service.",
+        "p2": "Our mission is simple yet ambitious: to preserve the pristine condition of your investment. We specialize in comprehensive care—from deep cleaning and teak treatments to metal polishing and engine room maintenance—ensuring your yacht always looks its absolute best.",
+        "quote": "Your satisfaction isn't just our goal—it's our promise."
     }
 }

@@ -12,17 +12,20 @@ export default function Footer({ locale }: { locale: string }) {
         <footer className="bg-navy text-gold pt-20 pb-10 border-t border-white/10">
             <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
                 {/* Col 1: Brand */}
-                <div className="space-y-6">
-                    <div className="mb-4">
+                <div className="flex flex-col items-center text-center">
+                    <Link href={`/${locale}`} className="mb-6 block relative group">
                         <Image
-                            src="/assets/images/logo.png"
+                            src="/assets/images/logoFooter.png"
                             alt="Prestige Yacht Detailing"
                             width={220}
                             height={80}
-                            className="h-32 w-auto object-contain"
+                            className="h-36 w-auto object-contain drop-shadow-[0_0_15px_rgba(212,175,55,0.1)] transition-transform duration-300 group-hover:scale-105"
                         />
-                    </div>
-                    <p className="text-gold/80 leading-relaxed max-w-sm text-sm">
+                    </Link>
+
+                    <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-gold/40 to-transparent mb-6"></div>
+
+                    <p className="text-gold/80 leading-loose max-w-xs text-sm font-light tracking-wide">
                         {t('slogan')}
                     </p>
                 </div>
@@ -49,7 +52,7 @@ export default function Footer({ locale }: { locale: string }) {
                             </div>
                             <div>
                                 <span className="block text-xs uppercase text-gold/60 mb-1">Call Us</span>
-                                <a href="tel:+13051234567" className="text-gold group-hover:text-white transition-colors font-medium">+1 (305) 123-4567</a>
+                                <a href="tel:+19548534995" className="text-gold group-hover:text-white transition-colors font-medium">+1 (954) 853-4995</a>
                             </div>
                         </li>
                         <li className="flex items-start gap-4 group">
@@ -58,7 +61,7 @@ export default function Footer({ locale }: { locale: string }) {
                             </div>
                             <div>
                                 <span className="block text-xs uppercase text-gold/60 mb-1">Email Us</span>
-                                <a href="mailto:contact@prestigeyachts.com" className="text-gold group-hover:text-white transition-colors font-medium">contact@prestigeyachts.com</a>
+                                <a href="mailto:contact@prestigeyachtsdetailing.com" className="text-gold group-hover:text-white transition-colors font-medium">contact@prestigeyachtsdetailing.com</a>
                             </div>
                         </li>
                         <li className="flex items-start gap-4 group">
@@ -67,7 +70,7 @@ export default function Footer({ locale }: { locale: string }) {
                             </div>
                             <div>
                                 <span className="block text-xs uppercase text-gold/60 mb-1">Visit Us</span>
-                                <span className="text-gold block">Miami Beach Marina, FL</span>
+                                <span className="text-gold block">Miami. Miami Beach, South Florida. Fort Lauderdale.</span>
                             </div>
                         </li>
                     </ul>
