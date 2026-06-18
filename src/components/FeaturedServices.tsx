@@ -54,7 +54,7 @@ export default function FeaturedServices() {
                             <div className="absolute inset-4 border border-white/5 group-hover:border-gold/20 transition-colors duration-700 z-20 pointer-events-none" />
 
                             <iframe 
-                                src="https://www.youtube.com/embed/BqxipSx5jLA?autoplay=1&mute=1&loop=1&playlist=BqxipSx5jLA&controls=0&rel=0&showinfo=0&modestbranding=1" 
+                                src="https://www.youtube.com/embed/1fyk84tJx-M?autoplay=1&mute=1&loop=1&playlist=1fyk84tJx-M&controls=0&rel=0&showinfo=0&modestbranding=1" 
                                 title="Prestige Yachts Detailing Short"
                                 className="absolute inset-0 w-full h-full border-0 object-cover"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
