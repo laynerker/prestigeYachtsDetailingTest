@@ -56,12 +56,59 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h3,
-h4,
-h5,
-h6 {
+.text-display {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-stretch: 125%;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.5rem, 4vw + 1rem, 7rem);
+  line-height: 1.05;
+}
+
+.text-heading-1 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-stretch: 112%;
+  font-size: clamp(2rem, 2.5vw + 1rem, 3.75rem);
+  line-height: 1.1;
+}
+
+.text-heading-2 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-stretch: 100%;
+  font-size: clamp(1.5rem, 1.5vw + 1rem, 2.5rem);
+  line-height: 1.15;
+}
+
+.text-heading-3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-stretch: 100%;
+  font-size: clamp(1.25rem, 1vw + 0.75rem, 1.75rem);
+  line-height: 1.2;
+}
+
+.text-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-stretch: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  color: var(--color-chalk);
+}
+
+.text-body {
   font-family: var(--font-serif);
-  color: var(--color-navy);
+  font-weight: 400;
+}
+
+.text-caption {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
 }
 
 .noise-overlay {
