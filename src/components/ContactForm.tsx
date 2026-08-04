@@ -76,7 +76,7 @@ function ContactFormContent() {
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded border border-gray-300 focus:border-navy focus:ring-1 focus:ring-navy outline-none transition-all"
+                        className="w-full px-4 py-3 rounded border border-gray-300 focus:border-teak focus:ring-1 focus:ring-teak outline-none transition-all"
                         placeholder={t('placeholderFirstName')}
                     />
                 </div>
@@ -87,7 +87,7 @@ function ContactFormContent() {
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded border border-gray-300 focus:border-navy focus:ring-1 focus:ring-navy outline-none transition-all"
+                        className="w-full px-4 py-3 rounded border border-gray-300 focus:border-teak focus:ring-1 focus:ring-teak outline-none transition-all"
                         placeholder={t('placeholderLastName')}
                     />
                 </div>
@@ -101,7 +101,7 @@ function ContactFormContent() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded border border-gray-300 focus:border-navy focus:ring-1 focus:ring-navy outline-none transition-all"
+                    className="w-full px-4 py-3 rounded border border-gray-300 focus:border-teak focus:ring-1 focus:ring-teak outline-none transition-all"
                     placeholder={t('placeholderEmail')}
                 />
             </div>
@@ -114,7 +114,7 @@ function ContactFormContent() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded border border-gray-300 focus:border-navy focus:ring-1 focus:ring-navy outline-none transition-all"
+                    className="w-full px-4 py-3 rounded border border-gray-300 focus:border-teak focus:ring-1 focus:ring-teak outline-none transition-all"
                     placeholder={t('placeholderPhone')}
                 />
             </div>
@@ -127,7 +127,7 @@ function ContactFormContent() {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded border border-gray-300 focus:border-navy focus:ring-1 focus:ring-navy outline-none transition-all"
+                    className="w-full px-4 py-3 rounded border border-gray-300 focus:border-teak focus:ring-1 focus:ring-teak outline-none transition-all"
                     placeholder={t('placeholderMessage')}
                 />
             </div>
@@ -135,7 +135,7 @@ function ContactFormContent() {
             <button
                 disabled={status === 'sending'}
                 type="submit"
-                className="w-full py-4 bg-navy text-white font-bold rounded hover:bg-navy-light transition-colors disabled:opacity-70 uppercase tracking-widest text-sm"
+                className="w-full py-4 bg-slipway text-gelcoat font-bold rounded hover:bg-bilge transition-colors disabled:opacity-70 uppercase tracking-widest text-sm"
             >
                 {status === 'sending' ? t('sending') : t('send')}
             </button>

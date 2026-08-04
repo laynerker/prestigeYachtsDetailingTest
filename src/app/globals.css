@@ -1,35 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand Colors */
-  --color-navy: #0A1420;
-  --color-navy-light: #162436;
-  --color-gold: #D4AF37;
-  --color-gold-light: #FCE181;
-  --color-gold-dark: #997A00;
-  --color-white: #FAFAFA;
-  --color-black: #000000;
+  /* Brand Colors — plan-mejora-diseno.md §2 */
+  --color-slipway: #0B1614;
+  --color-bilge: #16211F;
+  --color-chalk: #8B9793;
+  --color-gelcoat: #F2F4F3;
+  --color-teak: #C08A4A;
+  --color-teak-deep: #8A5A2B;
 
   /* Theme mapping */
-  --background: var(--color-white);
-  --foreground: var(--color-navy);
+  --background: var(--color-gelcoat);
+  --foreground: var(--color-slipway);
 
-  --primary: var(--color-navy);
-  --primary-foreground: var(--color-white);
+  --primary: var(--color-slipway);
+  --primary-foreground: var(--color-gelcoat);
 
-  --secondary: var(--color-gold);
-  --secondary-foreground: var(--color-navy);
+  --secondary: var(--color-teak);
+  --secondary-foreground: var(--color-slipway);
 
-  --muted: #F3F4F6;
-  --muted-foreground: #6B7280;
+  --muted: var(--color-bilge);
+  --muted-foreground: var(--color-chalk);
 }
 
 @theme inline {
-  --color-navy: var(--color-navy);
-  --color-navy-light: var(--color-navy-light);
-  --color-gold: var(--color-gold);
-  --color-gold-light: var(--color-gold-light);
-  --color-gold-dark: var(--color-gold-dark);
+  --color-slipway: var(--color-slipway);
+  --color-bilge: var(--color-bilge);
+  --color-chalk: var(--color-chalk);
+  --color-gelcoat: var(--color-gelcoat);
+  --color-teak: var(--color-teak);
+  --color-teak-deep: var(--color-teak-deep);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -43,9 +43,9 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
 
-  /* Fonts rely on CSS variables set in layout */
-  --font-serif: var(--font-playfair);
-  --font-sans: var(--font-inter);
+  /* Fonts rely on CSS variables set in layout (Task 4) */
+  --font-sans: var(--font-archivo);
+  --font-serif: var(--font-source-serif);
 }
 
 body {
@@ -56,12 +56,58 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h3,
-h4,
-h5,
-h6 {
+.text-display {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-stretch: 125%;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.5rem, 4vw + 1rem, 7rem);
+  line-height: 1.05;
+}
+
+.text-heading-1 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-stretch: 112%;
+  font-size: clamp(2rem, 2.5vw + 1rem, 3.75rem);
+  line-height: 1.1;
+}
+
+.text-heading-2 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-stretch: 100%;
+  font-size: clamp(1.5rem, 1.5vw + 1rem, 2.5rem);
+  line-height: 1.15;
+}
+
+.text-heading-3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-stretch: 100%;
+  font-size: clamp(1.25rem, 1vw + 0.75rem, 1.75rem);
+  line-height: 1.2;
+}
+
+.text-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-stretch: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+}
+
+.text-body {
   font-family: var(--font-serif);
-  color: var(--color-navy);
+  font-weight: 400;
+}
+
+.text-caption {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
 }
 
 .noise-overlay {
@@ -71,11 +117,4 @@ h6 {
   z-index: 50;
   opacity: 0.03;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-}
-
-.text-gradient-gold {
-  background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 50%, var(--color-gold-dark) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
