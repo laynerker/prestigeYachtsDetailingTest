@@ -21,21 +21,21 @@ export default async function Contact({ params }: { params: Promise<{ locale: st
                 <div className="container mx-auto px-4 py-20">
                 <div className="flex flex-col lg:flex-row gap-16">
                     <div className="w-full lg:w-3/5">
-                        <h2 className="text-3xl font-serif font-bold text-navy mb-8">Send Us a Message</h2>
+                        <h2 className="text-3xl font-serif font-bold text-navy mb-8">{t('formTitle')}</h2>
                         <ContactForm />
                     </div>
 
                     <div className="w-full lg:w-2/5">
-                        <h2 className="text-3xl font-serif font-bold text-navy mb-8">Contact Information</h2>
+                        <h2 className="text-3xl font-serif font-bold text-navy mb-8">{t('infoTitle')}</h2>
                         <div className="bg-gray-50 p-8 rounded-xl border border-gray-100 shadow-sm space-y-8">
                             <div className="flex items-start gap-4">
                                 <div className="p-3 bg-white rounded-full text-gold shadow-sm shrink-0">
                                     <Phone size={24} />
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                    <span className="block text-sm uppercase text-gray-500 font-bold tracking-wider mb-1">Phone</span>
+                                    <span className="block text-sm uppercase text-gray-500 font-bold tracking-wider mb-1">{t('phoneLabel')}</span>
                                     <a href="tel:+19548534995" className="block text-base md:text-xl text-navy hover:text-gold transition-colors font-medium break-words">+1 (954) 853-4995</a>
-                                    <p className="text-sm text-gray-400 mt-1">Mon-Sun, 9am - 8pm</p>
+                                    <p className="text-sm text-gray-400 mt-1">{t('hoursLabel')}</p>
                                 </div>
                             </div>
 
@@ -44,7 +44,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: st
                                     <Mail size={24} />
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                    <span className="block text-sm uppercase text-gray-500 font-bold tracking-wider mb-1">Email</span>
+                                    <span className="block text-sm uppercase text-gray-500 font-bold tracking-wider mb-1">{t('emailLabel')}</span>
                                     <a href="mailto:contact@prestigeyachtsdetailing.com" className="block text-base md:text-xl text-navy hover:text-gold transition-colors font-medium break-words">contact@prestigeyachtsdetailing.com</a>
                                 </div>
                             </div>
@@ -54,9 +54,9 @@ export default async function Contact({ params }: { params: Promise<{ locale: st
                                     <MapPin size={24} />
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                    <span className="block text-sm uppercase text-gray-500 font-bold tracking-wider mb-1">Location</span>
-                                    <p className="text-base md:text-xl text-navy font-medium break-words">South Florida</p>
-                                    <p className="text-sm md:text-base text-gray-500 mt-1">Miami, Miami Beach, Fort Lauderdale</p>
+                                    <span className="block text-sm uppercase text-gray-500 font-bold tracking-wider mb-1">{t('locationLabel')}</span>
+                                    <p className="text-base md:text-xl text-navy font-medium break-words">{t('locationValue')}</p>
+                                    <p className="text-sm md:text-base text-gray-500 mt-1">{t('locationDetail')}</p>
                                 </div>
                             </div>
                         </div>

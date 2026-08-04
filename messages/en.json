@@ -8,11 +8,11 @@
     "Home": {
         "heroBeforeAlt": "Yacht hull before wash and polish, coated in salt residue and oxidation",
         "heroAfterAlt": "Same yacht hull after wash and polish, restored to a mirror finish",
-        "title": "Luxury Yachting Redefined",
-        "subtitle": "Premium yacht maintenance in Miami",
+        "title": "Every Surface, Restored",
+        "subtitle": "Gelcoat, teak, steel, and engine rooms — each with its own process.",
         "cta": "Explore Our Experience",
         "inviteTitle": "Discover Our Services",
-        "inviteText": "Experience the ultimate care for your yacht. Our team is dedicated to providing premium washing, detailing, and protection services that ensure your vessel maintains its flawless appearance.",
+        "inviteText": "Gelcoat, teak, steel, and engine rooms. Each surface gets its own process, not a one-size wash.",
         "inviteCta": "View All Services",
         "featuredEyebrow": "Excellence",
         "stats": {
@@ -31,7 +31,7 @@
         "title": "Welcome to Prestige Yacht Detailing",
         "p1": "At Prestige Yacht Detailing, we are setting a new standard for yacht care in Miami. We are a passionate team in the maritime industry, bringing fresh energy, unwavering dedication, and an obsessive attention to detail to every service.",
         "p2": "Our mission is simple yet ambitious: to preserve the pristine condition of your vessel. We specialize in comprehensive care—from deep cleaning and teak treatments to metal polishing and engine room maintenance—ensuring your yacht always looks its absolute best.",
-        "quote": "Your satisfaction isn't just our goal—it's our promise."
+        "quote": "Every vessel we detail, the owner can inspect the difference themselves — before we ask for a review."
     },
     "Services": {
         "headerTitle": "Enhance Your Experience",
@@ -100,7 +100,15 @@
         "send": "Send Message",
         "sending": "Sending...",
         "success": "Message sent successfully!",
-        "error": "An error occurred while sending your message. Please try again later."
+        "error": "An error occurred while sending your message. Please try again later.",
+        "formTitle": "Send Us a Message",
+        "infoTitle": "Contact Information",
+        "hoursLabel": "Mon-Sun, 9am - 8pm",
+        "phoneLabel": "Phone",
+        "emailLabel": "Email",
+        "locationLabel": "Location",
+        "locationValue": "South Florida",
+        "locationDetail": "Miami, Miami Beach, Fort Lauderdale"
     },
     "RecentWork": {
         "eyebrow": "Recent Work",

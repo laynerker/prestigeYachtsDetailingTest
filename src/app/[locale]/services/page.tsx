@@ -33,7 +33,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
                                         <ImageComparison
                                             imageBefore={item.imageBefore}
                                             imageAfter={item.imageAfter}
-                                            alt={item.title}
+                                            alt={t(`items.${item.id}.description`)}
                                         />
                                     </div>
                                     <div className="w-full md:w-1/2">
@@ -87,7 +87,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
                                         <ImageComparison
                                             imageBefore={item.imageBefore}
                                             imageAfter={item.imageAfter}
-                                            alt={item.title}
+                                            alt={t(`items.${item.id}.description`)}
                                         />
                                     </div>
                                 </>

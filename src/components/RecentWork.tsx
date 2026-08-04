@@ -20,7 +20,7 @@ export default function RecentWork() {
                                 <ImageComparison
                                     imageBefore={item.imageBefore}
                                     imageAfter={item.imageAfter}
-                                    alt={item.title}
+                                    alt={tServices(`items.${item.id}.description`)}
                                 />
                             </div>
                             <div className="flex items-baseline gap-3">
