@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import FeaturedServices from '@/components/FeaturedServices';
+import RecentWork from '@/components/RecentWork';
 
 export default async function Home({
   params
@@ -20,14 +21,7 @@ export default async function Home({
       <Navigation locale={locale} />
       <Hero />
       <FeaturedServices />
-
-      {/* Placeholder for other sections */}
-      <div id="fleet" className="min-h-[50vh] bg-navy flex flex-col items-center justify-center relative overflow-hidden border-t border-white/5 py-24">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-navy/50 pointer-events-none" />
-        <p className="text-gold tracking-[0.4em] uppercase text-xs mb-4 opacity-50 relative z-10">Exclusive Collection</p>
-        <h2 className="text-4xl md:text-5xl font-serif text-white/20 relative z-10 tracking-widest text-center px-4">THE FLEET<br /><span className="text-xl md:text-2xl mt-4 block">Coming Soon</span></h2>
-      </div>
-
+      <RecentWork />
       <Footer locale={locale} />
     </main>
   );

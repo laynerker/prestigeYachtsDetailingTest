@@ -14,6 +14,7 @@
         "inviteTitle": "Descubre Nuestros Servicios",
         "inviteText": "Experimente el cuidado definitivo para su yate. Nuestro equipo se dedica a proporcionar servicios premium de lavado, detallado y protección, asegurando que su embarcación mantenga una apariencia impecable.",
         "inviteCta": "Ver Todos los Servicios",
+        "featuredEyebrow": "Excelencia",
         "stats": {
             "yachts": "Yates impecables",
             "clients": "Clientes santisfechos",
@@ -100,5 +101,9 @@
         "sending": "Enviando...",
         "success": "¡Mensaje enviado con éxito!",
         "error": "Ocurrió un error al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde."
+    },
+    "RecentWork": {
+        "eyebrow": "Trabajos Recientes",
+        "title": "Embarcaciones reales, materiales reales, tratados este mes."
     }
 }

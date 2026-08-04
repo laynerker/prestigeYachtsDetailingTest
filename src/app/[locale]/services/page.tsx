@@ -3,57 +3,13 @@ import Footer from '@/components/Footer';
 import ImageComparison from '@/components/ImageComparison';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import ServiceButton from '@/components/ServiceButton';
-
-const MATERIAL_EYEBROW: Record<string, string> = {
-    washDown: 'CASCO',
-    premiumDetailedWash: 'GELCOAT',
-    teakCleaning: 'TECA',
-    metalPolish: 'ACERO',
-    engineRoomCare: 'SALA DE MÁQUINAS',
-};
+import { SERVICES } from '@/data/services';
 
 export default async function Services({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     setRequestLocale(locale);
     const t = await getTranslations('Services');
     const tContact = await getTranslations('Contact');
-    const itemsServices = [
-        {
-            title: "Wash Down",
-            id: "washDown",
-            imageBefore: "/assets/images/services/wash_down_antes.webp",
-            imageAfter: "/assets/images/services/wash_down_despues.webp",
-            itemCount: 4
-        },
-        {
-            title: "Premium Detailed Wash",
-            id: "premiumDetailedWash",
-            imageBefore: "/assets/images/services/Detailing_antes.webp",
-            imageAfter: "/assets/images/services/Detailing_despues.webp",
-            itemCount: 6
-        },
-        {
-            title: "Teak Cleaning & Treatment",
-            id: "teakCleaning",
-            imageBefore: "/assets/images/services/Teak_antes.webp",
-            imageAfter: "/assets/images/services/Teak_despues.webp",
-            itemCount: 3
-        },
-        {
-            title: "Metal Polish",
-            id: "metalPolish",
-            imageBefore: "/assets/images/services/metal_polish_antes.webp",
-            imageAfter: "/assets/images/services/metal_polish_despues.webp",
-            itemCount: 3
-        },
-        {
-            title: "Engine Room Care",
-            id: "engineRoomCare",
-            imageBefore: "/assets/images/services/engine_room_antes.webp",
-            imageAfter: "/assets/images/services/engine_room_despues.webp",
-            itemCount: 3
-        }
-    ]
 
     return (
         <main className="flex min-h-screen flex-col">
@@ -63,7 +19,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
                 <h1 className="text-heading-1 text-gelcoat">{t('headerTitle')}</h1>
             </section>
 
-            {itemsServices.map((item, index) => (
+            {SERVICES.map((item, index) => (
                 <section
                     key={index}
                     id={item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}
@@ -81,7 +37,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
                                         />
                                     </div>
                                     <div className="w-full md:w-1/2">
-                                        <span className="text-eyebrow block mb-3">{MATERIAL_EYEBROW[item.id]}</span>
+                                        <span className="text-eyebrow block mb-3">{item.material}</span>
                                         <h2 className="text-heading-2 text-slipway mb-4">{item.title}</h2>
                                         <h3 className="text-heading-3 text-teak-deep mb-4">{t(`items.${item.id}.description`)}</h3>
                                         <p className="text-body text-slipway/70 mb-6 leading-relaxed">
@@ -106,7 +62,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
                             ) : (
                                 <>
                                     <div className="w-full md:w-1/2">
-                                        <span className="text-eyebrow block mb-3">{MATERIAL_EYEBROW[item.id]}</span>
+                                        <span className="text-eyebrow block mb-3">{item.material}</span>
                                         <h2 className="text-heading-2 text-gelcoat mb-4">{item.title}</h2>
                                         <h3 className="text-heading-3 text-teak mb-4">{t(`items.${item.id}.description`)}</h3>
                                         <p className="text-body text-chalk mb-6 leading-relaxed">

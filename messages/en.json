@@ -14,6 +14,7 @@
         "inviteTitle": "Discover Our Services",
         "inviteText": "Experience the ultimate care for your yacht. Our team is dedicated to providing premium washing, detailing, and protection services that ensure your vessel maintains its flawless appearance.",
         "inviteCta": "View All Services",
+        "featuredEyebrow": "Excellence",
         "stats": {
             "yachts": "Impeccable Yachts",
             "clients": "Satisfied Clients",
@@ -100,5 +101,9 @@
         "sending": "Sending...",
         "success": "Message sent successfully!",
         "error": "An error occurred while sending your message. Please try again later."
+    },
+    "RecentWork": {
+        "eyebrow": "Recent Work",
+        "title": "Real vessels, real materials, treated this month."
     }
 }
