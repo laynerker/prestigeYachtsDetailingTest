@@ -26,7 +26,7 @@ export default function FeaturedServices() {
                             <span className="h-[1px] w-12 bg-teak/40"></span>
                             <p className="text-teak tracking-[0.3em] text-xs font-semibold uppercase">{t('featuredEyebrow')}</p>
                         </div>
-                        <h2 className="text-4xl lg:text-5xl font-serif text-slipway mb-6 leading-tight">
+                        <h2 className="text-heading-1 text-slipway mb-6">
                             {t('inviteTitle')}
                         </h2>
                         <p className="text-slipway/70 text-lg leading-relaxed mb-10">
@@ -34,7 +34,7 @@ export default function FeaturedServices() {
                         </p>
                         <Link
                             href={`/${locale}/services`}
-                            className="inline-flex items-center justify-center px-8 py-4 border border-teak/40 text-teak hover:bg-teak hover:text-gelcoat transition-all duration-300 tracking-wider text-sm font-semibold uppercase group rounded-sm"
+                            className="inline-flex items-center justify-center px-8 py-4 border border-teak/40 text-teak hover:bg-teak hover:text-slipway transition-all duration-300 tracking-wider text-sm font-semibold uppercase group rounded-sm"
                         >
                             {t('inviteCta')}
                         </Link>

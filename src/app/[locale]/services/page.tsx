@@ -37,7 +37,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
                                         />
                                     </div>
                                     <div className="w-full md:w-1/2">
-                                        <span className="text-eyebrow block mb-3">{item.material}</span>
+                                        <span className="text-eyebrow text-teak-deep block mb-3">{item.material}</span>
                                         <h2 className="text-heading-2 text-slipway mb-4">{item.title}</h2>
                                         <h3 className="text-heading-3 text-teak-deep mb-4">{t(`items.${item.id}.description`)}</h3>
                                         <p className="text-body text-slipway/70 mb-6 leading-relaxed">
@@ -62,7 +62,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
                             ) : (
                                 <>
                                     <div className="w-full md:w-1/2">
-                                        <span className="text-eyebrow block mb-3">{item.material}</span>
+                                        <span className="text-eyebrow text-chalk block mb-3">{item.material}</span>
                                         <h2 className="text-heading-2 text-gelcoat mb-4">{item.title}</h2>
                                         <h3 className="text-heading-3 text-teak mb-4">{t(`items.${item.id}.description`)}</h3>
                                         <p className="text-body text-chalk mb-6 leading-relaxed">

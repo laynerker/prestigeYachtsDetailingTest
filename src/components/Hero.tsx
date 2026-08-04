@@ -25,7 +25,7 @@ export default function Hero() {
             <div className="noise-overlay" />
 
             <div className="relative z-10 px-4 py-16 md:py-20 max-w-5xl mx-auto text-center">
-                <span className="text-eyebrow block mb-6">
+                <span className="text-eyebrow text-chalk block mb-6">
                     Prestige Yachts Detailing
                 </span>
                 <h1 className="text-display text-gelcoat mb-6">

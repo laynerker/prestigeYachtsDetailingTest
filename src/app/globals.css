@@ -96,7 +96,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.75rem;
-  color: var(--color-chalk);
 }
 
 .text-body {

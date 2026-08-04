@@ -113,5 +113,10 @@
     "RecentWork": {
         "eyebrow": "Trabajos Recientes",
         "title": "Embarcaciones reales, materiales reales, tratados este mes."
+    },
+    "ImageComparison": {
+        "before": "Antes",
+        "after": "Después",
+        "compareLabel": "Comparador antes/después: {alt}"
     }
 }

@@ -113,5 +113,10 @@
     "RecentWork": {
         "eyebrow": "Recent Work",
         "title": "Real vessels, real materials, treated this month."
+    },
+    "ImageComparison": {
+        "before": "Before",
+        "after": "After",
+        "compareLabel": "Before/after comparison: {alt}"
     }
 }

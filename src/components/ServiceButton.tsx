@@ -30,7 +30,7 @@ export default function ServiceButton({ serviceTitle, whatsappText, buttonText, 
     // We render it as a disabled button so the layout doesn't shift
     if (!mounted) {
         return (
-            <button disabled className="inline-block px-8 py-3 bg-navy text-white font-serif tracking-wide rounded opacity-50 cursor-default drop-shadow-md">
+            <button disabled className="inline-block px-8 py-3 bg-slipway text-gelcoat font-serif tracking-wide rounded opacity-50 cursor-default drop-shadow-md">
                 {buttonText}
             </button>
         );
@@ -42,7 +42,7 @@ export default function ServiceButton({ serviceTitle, whatsappText, buttonText, 
                 href={`https://wa.me/19548534995?text=${whatsappText}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-8 py-3 bg-navy text-white font-serif tracking-wide rounded hover:bg-gold transition-colors drop-shadow-md"
+                className="inline-block px-8 py-3 bg-slipway text-gelcoat font-serif tracking-wide rounded hover:bg-teak transition-colors drop-shadow-md"
             >
                 {buttonText}
             </a>
@@ -52,7 +52,7 @@ export default function ServiceButton({ serviceTitle, whatsappText, buttonText, 
     return (
         <Link
             href={`/${locale}/contact?service=${encodeURIComponent(serviceTitle)}`}
-            className="inline-block px-8 py-3 bg-navy text-white font-serif tracking-wide rounded hover:bg-gold transition-colors drop-shadow-md"
+            className="inline-block px-8 py-3 bg-slipway text-gelcoat font-serif tracking-wide rounded hover:bg-teak transition-colors drop-shadow-md"
         >
             {buttonText}
         </Link>

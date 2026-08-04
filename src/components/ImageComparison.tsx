@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, TouchEvent, MouseEvent, KeyboardEvent } from 'react';
 import Image from 'next/image';
 import { ChevronsLeftRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface ImageComparisonProps {
     imageBefore: string;
@@ -23,6 +24,7 @@ export default function ImageComparison({
     altBefore,
     altAfter,
 }: ImageComparisonProps) {
+    const t = useTranslations('ImageComparison');
     const [sliderPosition, setSliderPosition] = useState(revealOnMount ? 2 : initialPosition);
     const [isDragging, setIsDragging] = useState(false);
     const [isRevealing, setIsRevealing] = useState(revealOnMount);
@@ -31,9 +33,9 @@ export default function ImageComparison({
 
     // Determine alt text based on whether altBefore/altAfter are provided
     const hasExplicitAltTexts = altBefore !== undefined && altAfter !== undefined;
-    const beforeAltText = hasExplicitAltTexts ? altBefore : `Antes: ${alt}`;
-    const afterAltText = hasExplicitAltTexts ? altAfter : `Después: ${alt}`;
-    const ariaLabel = hasExplicitAltTexts ? `${altBefore} / ${altAfter}` : `Comparador antes/después: ${alt}`;
+    const beforeAltText = hasExplicitAltTexts ? altBefore : `${t('before')}: ${alt}`;
+    const afterAltText = hasExplicitAltTexts ? altAfter : `${t('after')}: ${alt}`;
+    const ariaLabel = hasExplicitAltTexts ? `${altBefore} / ${altAfter}` : t('compareLabel', { alt });
 
     const calculatePosition = (clientX: number) => {
         if (!containerRef.current) return;
@@ -44,22 +46,26 @@ export default function ImageComparison({
 
     const handleMouseDown = (e: MouseEvent) => {
         hasInteractedRef.current = true;
+        setIsRevealing(false);
         setIsDragging(true);
         calculatePosition(e.clientX);
     };
 
     const handleTouchMove = (e: TouchEvent) => {
         hasInteractedRef.current = true;
+        setIsRevealing(false);
         calculatePosition(e.touches[0].clientX);
     };
 
     const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'ArrowLeft') {
             hasInteractedRef.current = true;
+            setIsRevealing(false);
             e.preventDefault();
             setSliderPosition((p) => Math.max(p - 5, 0));
         } else if (e.key === 'ArrowRight') {
             hasInteractedRef.current = true;
+            setIsRevealing(false);
             e.preventDefault();
             setSliderPosition((p) => Math.min(p + 5, 100));
         }
@@ -137,7 +143,7 @@ export default function ImageComparison({
                     priority
                 />
                 <div className="absolute bottom-4 right-4 bg-slipway/80 text-gelcoat text-xs font-medium px-3 py-1.5 rounded-full backdrop-blur-sm z-10 pointer-events-none">
-                    DESPUÉS
+                    {t('after').toUpperCase()}
                 </div>
             </div>
 
@@ -156,7 +162,7 @@ export default function ImageComparison({
                     priority
                 />
                 <div className="absolute bottom-4 left-4 bg-slipway/80 text-gelcoat text-xs font-medium px-3 py-1.5 rounded-full backdrop-blur-sm z-10 pointer-events-none">
-                    ANTES
+                    {t('before').toUpperCase()}
                 </div>
             </div>
 
