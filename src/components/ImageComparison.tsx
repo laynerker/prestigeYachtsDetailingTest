@@ -10,6 +10,8 @@ interface ImageComparisonProps {
     alt: string;
     initialPosition?: number;
     revealOnMount?: boolean;
+    altBefore?: string;
+    altAfter?: string;
 }
 
 export default function ImageComparison({
@@ -18,12 +20,20 @@ export default function ImageComparison({
     alt,
     initialPosition = 50,
     revealOnMount = false,
+    altBefore,
+    altAfter,
 }: ImageComparisonProps) {
     const [sliderPosition, setSliderPosition] = useState(revealOnMount ? 2 : initialPosition);
     const [isDragging, setIsDragging] = useState(false);
     const [isRevealing, setIsRevealing] = useState(revealOnMount);
     const containerRef = useRef<HTMLDivElement>(null);
     const hasInteractedRef = useRef(false);
+
+    // Determine alt text based on whether altBefore/altAfter are provided
+    const hasExplicitAltTexts = altBefore !== undefined && altAfter !== undefined;
+    const beforeAltText = hasExplicitAltTexts ? altBefore : `Antes: ${alt}`;
+    const afterAltText = hasExplicitAltTexts ? altAfter : `Después: ${alt}`;
+    const ariaLabel = hasExplicitAltTexts ? `${altBefore} / ${altAfter}` : `Comparador antes/después: ${alt}`;
 
     const calculatePosition = (clientX: number) => {
         if (!containerRef.current) return;
@@ -112,7 +122,7 @@ export default function ImageComparison({
             aria-valuenow={Math.round(sliderPosition)}
             aria-valuemin={0}
             aria-valuemax={100}
-            aria-label={`Comparador antes/después: ${alt}`}
+            aria-label={ariaLabel}
             className="relative w-full h-full overflow-hidden select-none cursor-ew-resize group focus:outline-none focus-visible:ring-2 focus-visible:ring-teak focus-visible:ring-offset-2 focus-visible:ring-offset-slipway"
             onMouseDown={handleMouseDown}
             onTouchMove={handleTouchMove}
@@ -121,7 +131,7 @@ export default function ImageComparison({
             <div className="absolute inset-0">
                 <Image
                     src={imageAfter}
-                    alt={`Después: ${alt}`}
+                    alt={afterAltText}
                     fill
                     className="object-cover"
                     priority
@@ -140,7 +150,7 @@ export default function ImageComparison({
             >
                 <Image
                     src={imageBefore}
-                    alt={`Antes: ${alt}`}
+                    alt={beforeAltText}
                     fill
                     className="object-cover"
                     priority
