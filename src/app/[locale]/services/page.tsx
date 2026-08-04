@@ -1,11 +1,16 @@
-import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import PageHeader from '@/components/PageHeader';
 import ImageComparison from '@/components/ImageComparison';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import Link from 'next/link';
 import ServiceButton from '@/components/ServiceButton';
+
+const MATERIAL_EYEBROW: Record<string, string> = {
+    washDown: 'CASCO',
+    premiumDetailedWash: 'GELCOAT',
+    teakCleaning: 'TECA',
+    metalPolish: 'ACERO',
+    engineRoomCare: 'SALA DE MÁQUINAS',
+};
 
 export default async function Services({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
@@ -51,76 +56,87 @@ export default async function Services({ params }: { params: Promise<{ locale: s
     ]
 
     return (
-        <main className="flex min-h-screen flex-col bg-white">
+        <main className="flex min-h-screen flex-col">
             <Navigation locale={locale} />
-            <PageHeader title={t('headerTitle')} imageSrc="/assets/images/hero.png" />
+
+            <section className="bg-slipway pt-40 pb-16 px-4 text-center">
+                <h1 className="text-heading-1 text-gelcoat">{t('headerTitle')}</h1>
+            </section>
 
             {itemsServices.map((item, index) => (
-                <section key={index} id={item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')} className="container mx-auto px-4 py-5 scroll-mt-32">
-                    <div className="flex flex-col md:flex-row gap-12 items-center mb-24">
-                        {index % 2 === 0 ? (
-                            <>
-                                <div className="w-full md:w-1/2 h-[400px] bg-gray-200 rounded-lg relative overflow-hidden shadow-xl">
-                                    <ImageComparison
-                                        imageBefore={item.imageBefore}
-                                        imageAfter={item.imageAfter}
-                                        alt={item.title}
-                                    />
-                                </div>
-                                <div className="w-full md:w-1/2">
-                                    <h2 className="text-3xl font-serif font-bold text-navy mb-6 border-b-2 border-gold inline-block pb-2">{item.title}</h2>
-                                    <h3 className="text-2xl font-medium text-gray-800 mb-4">{t(`items.${item.id}.description`)}</h3>
-                                    <p className="text-gray-600 mb-6 leading-relaxed">
-                                        {t('pricingNote')}
-                                    </p>
-                                    <ul className="space-y-3 mb-8">
-                                        {Array.from({ length: item.itemCount }).map((_, i) => (
-                                            <li key={i} className="flex items-center gap-3 text-gray-700">
-                                                <span className="w-2 h-2 rounded-full bg-gold"></span>
-                                                {t(`items.${item.id}.items.${i}`)}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <ServiceButton 
-                                        serviceTitle={item.title}
-                                        whatsappText={encodeURIComponent(tContact('defaultMessage', { service: item.title }))}
-                                        buttonText={t('requestAppointment')}
-                                        locale={locale}
-                                    />
-                                </div>
-                            </>
-                        ) : (
-                            <>
-                                <div className="w-full md:w-1/2">
-                                    <h2 className="text-3xl font-serif font-bold text-navy mb-6 border-b-2 border-gold inline-block pb-2">{item.title}</h2>
-                                    <h3 className="text-2xl font-medium text-gray-800 mb-4">{t(`items.${item.id}.description`)}</h3>
-                                    <p className="text-gray-600 mb-6 leading-relaxed">
-                                        {t('pricingNote')}
-                                    </p>
-                                    <ul className="space-y-3 mb-8">
-                                        {Array.from({ length: item.itemCount }).map((_, i) => (
-                                            <li key={i} className="flex items-center gap-3 text-gray-700">
-                                                <span className="w-2 h-2 rounded-full bg-gold"></span>
-                                                {t(`items.${item.id}.items.${i}`)}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <ServiceButton 
-                                        serviceTitle={item.title}
-                                        whatsappText={encodeURIComponent(tContact('defaultMessage', { service: item.title }))}
-                                        buttonText={t('requestAppointment')}
-                                        locale={locale}
-                                    />
-                                </div>
-                                <div className="w-full md:w-1/2 h-[400px] bg-gray-200 rounded-lg relative overflow-hidden shadow-xl">
-                                    <ImageComparison
-                                        imageBefore={item.imageBefore}
-                                        imageAfter={item.imageAfter}
-                                        alt={item.title}
-                                    />
-                                </div>
-                            </>
-                        )}
+                <section
+                    key={index}
+                    id={item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}
+                    className={index % 2 === 0 ? 'bg-gelcoat' : 'bg-slipway'}
+                >
+                    <div className="container mx-auto px-4 py-20 scroll-mt-32">
+                        <div className="flex flex-col md:flex-row gap-12 items-center">
+                            {index % 2 === 0 ? (
+                                <>
+                                    <div className="w-full md:w-1/2 h-[400px] relative overflow-hidden shadow-xl">
+                                        <ImageComparison
+                                            imageBefore={item.imageBefore}
+                                            imageAfter={item.imageAfter}
+                                            alt={item.title}
+                                        />
+                                    </div>
+                                    <div className="w-full md:w-1/2">
+                                        <span className="text-eyebrow block mb-3">{MATERIAL_EYEBROW[item.id]}</span>
+                                        <h2 className="text-heading-2 text-slipway mb-4">{item.title}</h2>
+                                        <h3 className="text-heading-3 text-teak-deep mb-4">{t(`items.${item.id}.description`)}</h3>
+                                        <p className="text-body text-slipway/70 mb-6 leading-relaxed">
+                                            {t('pricingNote')}
+                                        </p>
+                                        <ul className="space-y-3 mb-8">
+                                            {Array.from({ length: item.itemCount }).map((_, i) => (
+                                                <li key={i} className="flex items-center gap-3 text-slipway/80">
+                                                    <span className="w-2 h-2 rounded-full bg-teak"></span>
+                                                    {t(`items.${item.id}.items.${i}`)}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <ServiceButton
+                                            serviceTitle={item.title}
+                                            whatsappText={encodeURIComponent(tContact('defaultMessage', { service: item.title }))}
+                                            buttonText={t('requestAppointment')}
+                                            locale={locale}
+                                        />
+                                    </div>
+                                </>
+                            ) : (
+                                <>
+                                    <div className="w-full md:w-1/2">
+                                        <span className="text-eyebrow block mb-3">{MATERIAL_EYEBROW[item.id]}</span>
+                                        <h2 className="text-heading-2 text-gelcoat mb-4">{item.title}</h2>
+                                        <h3 className="text-heading-3 text-teak mb-4">{t(`items.${item.id}.description`)}</h3>
+                                        <p className="text-body text-chalk mb-6 leading-relaxed">
+                                            {t('pricingNote')}
+                                        </p>
+                                        <ul className="space-y-3 mb-8">
+                                            {Array.from({ length: item.itemCount }).map((_, i) => (
+                                                <li key={i} className="flex items-center gap-3 text-gelcoat/90">
+                                                    <span className="w-2 h-2 rounded-full bg-teak"></span>
+                                                    {t(`items.${item.id}.items.${i}`)}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <ServiceButton
+                                            serviceTitle={item.title}
+                                            whatsappText={encodeURIComponent(tContact('defaultMessage', { service: item.title }))}
+                                            buttonText={t('requestAppointment')}
+                                            locale={locale}
+                                        />
+                                    </div>
+                                    <div className="w-full md:w-1/2 h-[400px] relative overflow-hidden shadow-xl">
+                                        <ImageComparison
+                                            imageBefore={item.imageBefore}
+                                            imageAfter={item.imageAfter}
+                                            alt={item.title}
+                                        />
+                                    </div>
+                                </>
+                            )}
+                        </div>
                     </div>
                 </section>
             ))}

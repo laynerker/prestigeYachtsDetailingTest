@@ -1,6 +1,5 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import PageHeader from '@/components/PageHeader';
 import ContactForm from '@/components/ContactForm';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Phone, Mail, MapPin } from 'lucide-react';
@@ -11,11 +10,15 @@ export default async function Contact({ params }: { params: Promise<{ locale: st
     const t = await getTranslations('Contact');
 
     return (
-        <main className="flex min-h-screen flex-col bg-white">
+        <main className="flex min-h-screen flex-col">
             <Navigation locale={locale} />
-            <PageHeader title={t('headerTitle')} imageSrc="/assets/images/hero.png" />
 
-            <section className="container mx-auto px-4 py-20">
+            <section className="bg-slipway pt-40 pb-16 px-4 text-center">
+                <h1 className="text-heading-1 text-gelcoat">{t('headerTitle')}</h1>
+            </section>
+
+            <section className="bg-gelcoat">
+                <div className="container mx-auto px-4 py-20">
                 <div className="flex flex-col lg:flex-row gap-16">
                     <div className="w-full lg:w-3/5">
                         <h2 className="text-3xl font-serif font-bold text-navy mb-8">Send Us a Message</h2>
@@ -72,6 +75,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: st
                             />
                         </div>
                     </div>
+                </div>
                 </div>
             </section>
 
