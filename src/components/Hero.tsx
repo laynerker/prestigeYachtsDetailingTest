@@ -11,8 +11,8 @@ export default function Hero() {
         <section className="relative w-full bg-slipway overflow-hidden">
             <div className="relative h-[70vh] min-h-[480px] w-full">
                 <ImageComparison
-                    imageBefore="/assets/images/services/wash_down_antes.webp"
-                    imageAfter="/assets/images/services/wash_down_despues.webp"
+                    imageBefore="/assets/images/services/Detailing_antes.webp"
+                    imageAfter="/assets/images/services/Detailing_despues.webp"
                     alt="yacht hull wash comparison"
                     altBefore={t('heroBeforeAlt')}
                     altAfter={t('heroAfterAlt')}
