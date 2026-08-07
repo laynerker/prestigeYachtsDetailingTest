@@ -6,13 +6,12 @@
         "contact": "Contact Us"
     },
     "Home": {
-        "heroBeforeAlt": "Yacht deck cushion and canvas cover before detailing, stained with green mildew along the seams",
-        "heroAfterAlt": "Same deck cushion and cover after detailing, mildew fully removed",
-        "title": "Every Surface, Restored",
-        "subtitle": "Gelcoat, teak, steel, and engine rooms — each with its own process.",
+        "heroImageAlt": "Superyacht crossing Biscayne Bay at sunset with the Miami skyline behind it",
+        "title": "Luxury Nautical Redefined",
+        "subtitle": "Premium yacht maintenance in Miami.",
         "cta": "Explore Our Experience",
         "inviteTitle": "Discover Our Services",
-        "inviteText": "Gelcoat, teak, steel, and engine rooms. Each surface gets its own process, not a one-size wash.",
+        "inviteText": "Experience the ultimate care for your yacht. Our team is dedicated to providing premium washing, detailing, and protection services, ensuring your vessel maintains an impeccable appearance.",
         "inviteCta": "View All Services",
         "featuredEyebrow": "Excellence",
         "stats": {
@@ -112,7 +111,8 @@
     },
     "RecentWork": {
         "eyebrow": "Recent Work",
-        "title": "Real vessels, real materials, treated this month."
+        "title": "Real vessels, real materials, treated this month.",
+        "cta": "View Services"
     },
     "ImageComparison": {
         "before": "Before",

@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import PageHeader from '@/components/PageHeader';
 import ImageComparison from '@/components/ImageComparison';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import ServiceButton from '@/components/ServiceButton';
@@ -15,9 +16,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
         <main className="flex min-h-screen flex-col">
             <Navigation locale={locale} />
 
-            <section className="bg-slipway pt-40 pb-16 px-4 text-center">
-                <h1 className="text-heading-1 text-gelcoat">{t('headerTitle')}</h1>
-            </section>
+            <PageHeader title={t('headerTitle')} />
 
             {SERVICES.map((item, index) => (
                 <section
@@ -81,6 +80,7 @@ export default async function Services({ params }: { params: Promise<{ locale: s
                                             whatsappText={encodeURIComponent(tContact('defaultMessage', { service: item.title }))}
                                             buttonText={t('requestAppointment')}
                                             locale={locale}
+                                            dark
                                         />
                                     </div>
                                     <div className="w-full md:w-1/2 h-[400px] relative overflow-hidden shadow-xl">

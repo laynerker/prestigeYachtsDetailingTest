@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import PageHeader from '@/components/PageHeader';
 import ContactForm from '@/components/ContactForm';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Phone, Mail, MapPin } from 'lucide-react';
@@ -13,20 +14,18 @@ export default async function Contact({ params }: { params: Promise<{ locale: st
         <main className="flex min-h-screen flex-col">
             <Navigation locale={locale} />
 
-            <section className="bg-slipway pt-40 pb-16 px-4 text-center">
-                <h1 className="text-heading-1 text-gelcoat">{t('headerTitle')}</h1>
-            </section>
+            <PageHeader title={t('headerTitle')} />
 
             <section className="bg-gelcoat">
                 <div className="container mx-auto px-4 py-20">
                 <div className="flex flex-col lg:flex-row gap-16">
                     <div className="w-full lg:w-3/5">
-                        <h2 className="text-3xl font-serif font-bold text-navy mb-8">{t('formTitle')}</h2>
+                        <h2 className="text-heading-2 text-slipway mb-8">{t('formTitle')}</h2>
                         <ContactForm />
                     </div>
 
                     <div className="w-full lg:w-2/5">
-                        <h2 className="text-3xl font-serif font-bold text-navy mb-8">{t('infoTitle')}</h2>
+                        <h2 className="text-heading-2 text-slipway mb-8">{t('infoTitle')}</h2>
                         <div className="bg-gray-50 p-8 rounded-xl border border-gray-100 shadow-sm space-y-8">
                             <div className="flex items-start gap-4">
                                 <div className="p-3 bg-white rounded-full text-gold shadow-sm shrink-0">

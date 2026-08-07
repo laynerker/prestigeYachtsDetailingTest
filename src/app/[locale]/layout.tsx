@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Source_Serif_4 } from "next/font/google";
+import { Archivo, Playfair_Display } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
@@ -10,10 +10,10 @@ const archivo = Archivo({
   variable: "--font-archivo",
   weight: ["500", "600", "700"],
 });
-const sourceSerif = Source_Serif_4({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-source-serif",
-  weight: ["400", "600"],
+  variable: "--font-playfair",
+  weight: ["500", "600", "700"],
   style: ["normal", "italic"],
 });
 
@@ -49,7 +49,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${archivo.variable} ${sourceSerif.variable}`}>
+    <html lang={locale} className={`${archivo.variable} ${playfairDisplay.variable}`}>
       <body className="font-sans antialiased text-foreground bg-background min-h-screen flex flex-col">
         <NextIntlClientProvider messages={messages}>
           {children}

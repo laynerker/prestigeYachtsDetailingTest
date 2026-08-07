@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import PageHeader from '@/components/PageHeader';
 
 export default async function About({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
@@ -11,9 +12,7 @@ export default async function About({ params }: { params: Promise<{ locale: stri
         <main className="flex min-h-screen flex-col">
             <Navigation locale={locale} />
 
-            <section className="bg-slipway pt-40 pb-16 px-4 text-center">
-                <h1 className="text-heading-1 text-gelcoat">{t('title')}</h1>
-            </section>
+            <PageHeader title={t('title')} />
 
             <section className="bg-gelcoat py-20 px-4">
                 <div className="container mx-auto max-w-4xl">

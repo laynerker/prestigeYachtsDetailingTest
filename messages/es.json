@@ -6,13 +6,12 @@
         "contact": "Contacto"
     },
     "Home": {
-        "heroBeforeAlt": "Cojín y funda de cubierta de yate antes del detallado, con manchas de moho verde en las costuras",
-        "heroAfterAlt": "Mismo cojín y funda de cubierta después del detallado, sin rastro de moho",
-        "title": "Cada Superficie, Restaurada",
-        "subtitle": "Gelcoat, teca, acero y sala de máquinas — cada uno con su propio proceso.",
+        "heroImageAlt": "Superyate cruzando Biscayne Bay al atardecer con el horizonte de Miami detrás",
+        "title": "Lujo Náutico Redefinido",
+        "subtitle": "Mantenimiento de yates premium en Miami.",
         "cta": "Explora Nuestra Experiencia",
         "inviteTitle": "Descubre Nuestros Servicios",
-        "inviteText": "Gelcoat, teca, acero y sala de máquinas. Cada superficie tiene su propio proceso, no un lavado genérico.",
+        "inviteText": "Experimente el cuidado definitivo para su yate. Nuestro equipo se dedica a proporcionar servicios premium de lavado, detallado y protección, asegurando que su embarcación mantenga una apariencia impecable.",
         "inviteCta": "Ver Todos los Servicios",
         "featuredEyebrow": "Excelencia",
         "stats": {
@@ -112,7 +111,8 @@
     },
     "RecentWork": {
         "eyebrow": "Trabajos Recientes",
-        "title": "Embarcaciones reales, materiales reales, tratados este mes."
+        "title": "Embarcaciones reales, materiales reales, tratados este mes.",
+        "cta": "Ver Servicios"
     },
     "ImageComparison": {
         "before": "Antes",
