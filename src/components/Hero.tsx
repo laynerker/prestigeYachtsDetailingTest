@@ -3,6 +3,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { assetPath } from '@/lib/assetPath';
 
 export default function Hero() {
     const t = useTranslations('Home');
@@ -12,7 +13,7 @@ export default function Hero() {
         <section className="relative h-dvh min-h-[640px] w-full overflow-hidden bg-slipway">
             <div className="absolute inset-0">
                 <Image
-                    src="/assets/images/hero.png"
+                    src={assetPath('/assets/images/hero.png')}
                     alt={t('heroImageAlt')}
                     fill
                     className="object-cover"

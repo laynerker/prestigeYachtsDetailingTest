@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, TouchEvent, MouseEvent, KeyboardEvent } fr
 import Image from 'next/image';
 import { ChevronsLeftRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { assetPath } from '@/lib/assetPath';
 
 interface ImageComparisonProps {
     imageBefore: string;
@@ -136,7 +137,7 @@ export default function ImageComparison({
         >
             <div className="absolute inset-0">
                 <Image
-                    src={imageAfter}
+                    src={assetPath(imageAfter)}
                     alt={afterAltText}
                     fill
                     className="object-cover"
@@ -155,7 +156,7 @@ export default function ImageComparison({
                 }}
             >
                 <Image
-                    src={imageBefore}
+                    src={assetPath(imageBefore)}
                     alt={beforeAltText}
                     fill
                     className="object-cover"

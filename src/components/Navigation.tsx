@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { assetPath } from '@/lib/assetPath';
 
 export default function Navigation({ locale }: { locale: string }) {
     const t = useTranslations('Navigation');
@@ -75,7 +76,7 @@ export default function Navigation({ locale }: { locale: string }) {
                 <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
                     <Link href={`/${locale}`} className="relative z-50 block" onClick={() => setIsMobileMenuOpen(false)}>
                         <Image
-                            src="/assets/images/logo.png"
+                            src={assetPath('/assets/images/logo.png')}
                             alt="Prestige Yacht Detailing"
                             width={240}
                             height={80}

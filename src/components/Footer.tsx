@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { assetPath } from '@/lib/assetPath';
 
 const WhatsAppIcon = ({ size = 22, className = "" }: { size?: number, className?: string }) => (
     <svg 
@@ -34,7 +35,7 @@ export default function Footer({ locale }: { locale: string }) {
                     <div className="col-span-1 md:col-span-5 flex flex-col items-center md:items-start text-center md:text-left mb-12 md:mb-0">
                         <Link href={`/${locale}`} className="transform hover:scale-105 transition-transform duration-500 ease-out mb-8 inline-block">
                             <Image
-                                src="/assets/images/logoFooter.png"
+                                src={assetPath('/assets/images/logoFooter.png')}
                                 alt="Prestige Yacht Detailing"
                                 width={260}
                                 height={90}

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { assetPath } from '@/lib/assetPath';
 
 interface PageHeaderProps {
     title: string;
@@ -9,7 +10,7 @@ export default function PageHeader({ title }: PageHeaderProps) {
         <section className="relative pt-40 pb-16 px-4 text-center overflow-hidden bg-slipway">
             <div className="absolute inset-0">
                 <Image
-                    src="/assets/images/hero.png"
+                    src={assetPath('/assets/images/hero.png')}
                     alt=""
                     fill
                     className="object-cover"
