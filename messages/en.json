@@ -6,12 +6,14 @@
         "contact": "Contact Us"
     },
     "Home": {
-        "title": "Luxury Yachting Redefined",
-        "subtitle": "Premium yacht maintenance in Miami",
+        "heroImageAlt": "Superyacht crossing Biscayne Bay at sunset with the Miami skyline behind it",
+        "title": "Luxury Nautical Redefined",
+        "subtitle": "Premium yacht maintenance in Miami.",
         "cta": "Explore Our Experience",
         "inviteTitle": "Discover Our Services",
-        "inviteText": "Experience the ultimate care for your yacht. Our team is dedicated to providing premium washing, detailing, and protection services that ensure your vessel maintains its flawless appearance.",
+        "inviteText": "Experience the ultimate care for your yacht. Our team is dedicated to providing premium washing, detailing, and protection services, ensuring your vessel maintains an impeccable appearance.",
         "inviteCta": "View All Services",
+        "featuredEyebrow": "Excellence",
         "stats": {
             "yachts": "Impeccable Yachts",
             "clients": "Satisfied Clients",
@@ -28,7 +30,7 @@
         "title": "Welcome to Prestige Yacht Detailing",
         "p1": "At Prestige Yacht Detailing, we are setting a new standard for yacht care in Miami. We are a passionate team in the maritime industry, bringing fresh energy, unwavering dedication, and an obsessive attention to detail to every service.",
         "p2": "Our mission is simple yet ambitious: to preserve the pristine condition of your vessel. We specialize in comprehensive care—from deep cleaning and teak treatments to metal polishing and engine room maintenance—ensuring your yacht always looks its absolute best.",
-        "quote": "Your satisfaction isn't just our goal—it's our promise."
+        "quote": "Every vessel we detail, the owner can inspect the difference themselves — before we ask for a review."
     },
     "Services": {
         "headerTitle": "Enhance Your Experience",
@@ -97,6 +99,24 @@
         "send": "Send Message",
         "sending": "Sending...",
         "success": "Message sent successfully!",
-        "error": "An error occurred while sending your message. Please try again later."
+        "error": "An error occurred while sending your message. Please try again later.",
+        "formTitle": "Send Us a Message",
+        "infoTitle": "Contact Information",
+        "hoursLabel": "Mon-Sun, 9am - 8pm",
+        "phoneLabel": "Phone",
+        "emailLabel": "Email",
+        "locationLabel": "Location",
+        "locationValue": "South Florida",
+        "locationDetail": "Miami, Miami Beach, Fort Lauderdale"
+    },
+    "RecentWork": {
+        "eyebrow": "Recent Work",
+        "title": "Real vessels, real materials, treated this month.",
+        "cta": "View Services"
+    },
+    "ImageComparison": {
+        "before": "Before",
+        "after": "After",
+        "compareLabel": "Before/after comparison: {alt}"
     }
 }

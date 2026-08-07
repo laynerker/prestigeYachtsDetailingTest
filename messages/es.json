@@ -6,12 +6,14 @@
         "contact": "Contacto"
     },
     "Home": {
+        "heroImageAlt": "Superyate cruzando Biscayne Bay al atardecer con el horizonte de Miami detrás",
         "title": "Lujo Náutico Redefinido",
-        "subtitle": "Mantenimiento de yates premium en Miami",
+        "subtitle": "Mantenimiento de yates premium en Miami.",
         "cta": "Explora Nuestra Experiencia",
         "inviteTitle": "Descubre Nuestros Servicios",
         "inviteText": "Experimente el cuidado definitivo para su yate. Nuestro equipo se dedica a proporcionar servicios premium de lavado, detallado y protección, asegurando que su embarcación mantenga una apariencia impecable.",
         "inviteCta": "Ver Todos los Servicios",
+        "featuredEyebrow": "Excelencia",
         "stats": {
             "yachts": "Yates impecables",
             "clients": "Clientes santisfechos",
@@ -28,7 +30,7 @@
         "title": "Bienvenido a Prestige Yacht Detailing",
         "p1": "En Prestige Yacht Detailing, estamos estableciendo un nuevo estándar para el cuidado de yates en Miami. Somos un equipo apasionado en la industria marítima, aportamos energía fresca, dedicación inquebrantable y una obsesiva atención al detalle en cada servicio.",
         "p2": "Nuestra misión es simple pero ambiciosa: preservar la condición impecable de su embarcación. Nos especializamos en el cuidado integral, desde limpiezas profundas y tratamientos de teca hasta pulido de metales y mantenimiento de sala de máquinas, asegurando que su yate siempre luzca en óptimo estado.",
-        "quote": "Su satisfacción no es solo nuestro objetivo, es nuestra promesa."
+        "quote": "En cada embarcación que tratamos, el propietario puede verificar la diferencia por sí mismo — antes de pedirle una reseña."
     },
     "Services": {
         "headerTitle": "Mejora tu Experiencia",
@@ -97,6 +99,24 @@
         "send": "Enviar Mensaje",
         "sending": "Enviando...",
         "success": "¡Mensaje enviado con éxito!",
-        "error": "Ocurrió un error al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde."
+        "error": "Ocurrió un error al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.",
+        "formTitle": "Envíanos un Mensaje",
+        "infoTitle": "Información de Contacto",
+        "hoursLabel": "Lun-Dom, 9am - 8pm",
+        "phoneLabel": "Teléfono",
+        "emailLabel": "Email",
+        "locationLabel": "Ubicación",
+        "locationValue": "South Florida",
+        "locationDetail": "Miami, Miami Beach, Fort Lauderdale"
+    },
+    "RecentWork": {
+        "eyebrow": "Trabajos Recientes",
+        "title": "Embarcaciones reales, materiales reales, tratados este mes.",
+        "cta": "Ver Servicios"
+    },
+    "ImageComparison": {
+        "before": "Antes",
+        "after": "Después",
+        "compareLabel": "Comparador antes/después: {alt}"
     }
 }
